@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import {Hero, Contact, Who, Works} from './imports'
+import bgimg from ".//img/bg.jpeg";
+import { useRef } from "react";
+
+
+const Container = styled.div`
+  height: 100vh;
+  color: white;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  background-image: url(${bgimg});
+`;
+
 
 function App() {
+
+  const contactref=useRef(null);
+  const AboutMeref=useRef(null);
+  const Skillsref=useRef(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Hero vh4={contactref} AboutMeref={AboutMeref} Skillsref={Skillsref} />
+      <Who ref={AboutMeref} />
+      <Works ref={Skillsref} />
+      <Contact ref={contactref} />
+    </Container>
   );
 }
 
