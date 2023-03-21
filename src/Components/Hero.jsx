@@ -43,6 +43,8 @@ const Left = styled.div`
   gap: 20px;
   @media only screen and (max-width: 768px) {
     flex: 1;
+    border: 1px solid red;
+
     align-items: center;
   }
 `;
@@ -56,6 +58,7 @@ const Title = styled.h1`
   font-size: 74px;
   @media only screen and (max-width: 768px) {
     text-align: center;
+    margin-top: -2rem;
   }
 `;
 

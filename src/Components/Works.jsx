@@ -86,6 +86,9 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
+  @media only screen and (max-width: 768px) {
+    margin-top:-12rem ;
+  }
 `;
 
 
@@ -105,7 +108,7 @@ const Works = forwardRef((props, ref) => {
             ))}
           </List>
         </Left>
-        <Right>
+        <Right >
           {work === "FrontEnd dev" || work === "" ? (
             <WebDesign />
           ) : work === "React.js" ? (
