@@ -133,7 +133,6 @@ const Center = styled.div`
     flex: 1;
     width: 100%;
     max-height: 4rem;
-    border: 1px solid red ;
     position: relative;
     margin-top: 1rem;
     ${Img} {
