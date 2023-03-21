@@ -43,7 +43,6 @@ const Left = styled.div`
   gap: 20px;
   @media only screen and (max-width: 768px) {
     flex: 1;
-    border: 1px solid red;
 
     align-items: center;
   }
@@ -133,14 +132,16 @@ const Center = styled.div`
     display: flex;
     flex: 1;
     width: 100%;
-    max-height: 2rem;
+    max-height: 4rem;
+    border: 1px solid red ;
     position: relative;
+    margin-top: 1rem;
     ${Img} {
       animation: scroll 1.8s infinite  ;
 
       @keyframes scroll {
         78% {
-          transform: translateY(55px);
+          transform: translateY(35px);
         }
       }
     }
